@@ -1,0 +1,69 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-areas: "video sidebar"
+                         "content sidebar";
+    color: #000;
+}
+.video {
+    grid-area: video;
+}
+.sidebar {
+    grid-area: sidebar;
+    background: #FCFCFC;   
+    border-left: 1px solid #f2f3f5;
+}
+.sidebar .chapter-title {    
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    grid-template-rows: 50px;
+    column-gap: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #2C2C2C;
+    border-bottom: 1px solid #f2f3f5;
+    cursor: pointer;
+}
+.sidebar .chapter-title i {
+    display: grid;
+    justify-content: end;
+    align-items: center;
+}
+.sidebar .chapter-title strong {
+    display: grid;
+    align-items: center;
+}
+
+.sidebar .chapter-items > li {
+    display: grid;
+    grid-template-areas: "check title"
+                         "check subtitle";
+    grid-template-columns: 40px 1fr;
+    grid-template-rows: repeat(2,1fr);
+    column-gap: 6px;
+    margin-top: 4px;
+    text-decoration: none;
+    color: #393939;
+    cursor: pointer;
+}
+.sidebar .chapter-items > li.active {
+    color: #FF3D36;
+}
+.sidebar .chapter-items > li .check { 
+    grid-area: check;
+    display: grid;
+    justify-content: end;    
+}
+.sidebar .chapter-items > li strong {
+    grid-area: title;
+    font-size: 14px;
+}
+.sidebar .chapter-items > li p {
+    grid-area: subtitle;
+    font-size: 12px;
+}
+.content {
+    grid-area: content;
+    padding: 20px;
+}
