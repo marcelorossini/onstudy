@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Plyr from 'plyr';
 import styles from './style.css';
 
-export default function PlyrVideo() {
+export default function Video() {
   useEffect(() => {
     const player = new Plyr('#player',{
       title: 'Bla',
@@ -13,7 +13,7 @@ export default function PlyrVideo() {
 
   return (
     <video id="player" playsinline controls>
-      <source src="https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4" type="video/mp4" />
+      <source src="http://mirrors.standaloneinstaller.com/video-sample/Panasonic_HDC_TM_700_P_50i.mp4" type="video/mp4" />
     </video>
   );
 }

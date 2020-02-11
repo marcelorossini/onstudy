@@ -1,0 +1,42 @@
+header {
+    display: grid;
+    grid-template-areas: "logo . user";
+    grid-template-columns: 80px 1fr auto;
+    grid-template-rows: 1fr;
+    height: 65px;
+    background: #282828; 
+    border-bottom: 2px solid #393939;   
+}
+
+.logo {
+    grid-area: logo;
+    justify-self: center;
+    align-self: center;
+    font-size: 2em;
+    color: #FF3D36;
+}
+.course {
+    align-self: center;
+    font-size: 1.2em;
+}
+.user {
+    grid-area: user;    
+    display: grid;
+    grid-template-columns: 1fr 80px ;
+    grid-template-rows: 1fr;
+    gap: 10px;
+    height: 100%;
+}
+
+.user strong {
+    justify-self: end;
+    align-self: center;
+    font-size: 1.1em;
+}
+
+.user img {
+    align-self: center;
+    height: 60%;
+    border-radius: 50%;
+    border: 2px solid #393939;
+}
